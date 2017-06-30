@@ -1,0 +1,11 @@
+service: foo-service
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+
+functions:
+  hello:
+    handler: handler.hello
+    environment:
+     FOO_PATH: ${opt:foo-path}
